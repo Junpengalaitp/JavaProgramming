@@ -1,3 +1,5 @@
+package com.company;
+
 import java.util.ArrayList;
 
 public class GroceryList {
@@ -23,5 +25,13 @@ public class GroceryList {
     public void removeGroceryItem(int postion) {
         String theItem = groceryList.get(postion);
         groceryList.remove(postion);
+    }
+
+    public String findItem(String searchItem) {
+        int position = groceryList.indexOf(searchItem);
+        if(position>=0) {
+            return groceryList.get(position);
+        }
+        return null;
     }
 }
